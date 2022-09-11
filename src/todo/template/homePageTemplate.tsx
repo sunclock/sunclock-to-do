@@ -2,6 +2,8 @@ import * as React from 'react';
 
 export const HomePageTemplate:React.FC<{children: React.ReactNode[] | React.ReactNode | undefined}> = ({children}) => {
   return (
-    <div className="md:container md:mx-auto">{children}</div>
+    <div className="h-screen flex flex-col justify-center items-center gap-8 pb-8">
+      {children}
+    </div>
   )
 }

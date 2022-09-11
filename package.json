@@ -46,6 +46,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
+    "style": "yarn dlx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode [production]",
     "prettier": "prettier --write --config ./.prettierrc './src/**/*.{ts,tsx}'",
