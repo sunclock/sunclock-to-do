@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 // page
 import { Calendar, EditTodo, CreateTodo, Home, Todo, Welcome } from './todo/page';
+import './input.css';
 
 function App() {
 	return (

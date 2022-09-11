@@ -8,8 +8,9 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
     alias: {
-      types: path.resolve(__dirname, "src/types"),
-      hooks: path.resolve(__dirname, "src/hooks"),
+      "@types": path.resolve(__dirname, "src/@types"),
+      "@hooks": path.resolve(__dirname, "src/@hooks"),
+      "@assets": path.resolve(__dirname, "src/@assets"),
     },
   },
   entry: "./src/index.tsx",
@@ -18,9 +19,6 @@ module.exports = {
     filename: "bundle.min.js",
     publicPath: '/'
   },
-  devServer: {
-    historyApiFallback: true,
-  },
   module: {
     rules: [
       {
@@ -28,7 +26,24 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|jpe?g)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+          },
+        },
+      },      {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, 'src'),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,    
+    static: 'dist',
   },
   plugins: [
     new CleanWebpackPlugin(), // 웹팩 실행시마다 dist 폴더 정리
