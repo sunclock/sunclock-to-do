@@ -8,15 +8,18 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
     alias: {
-      components: path.resolve(__dirname, "src/components"),
-      util: path.resolve(__dirname, "src/util"),
-      util: path.resolve(__dirname, "src/hooks"),
+      types: path.resolve(__dirname, "src/types"),
+      hooks: path.resolve(__dirname, "src/hooks"),
     },
   },
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.min.js",
+    publicPath: '/'
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   module: {
     rules: [

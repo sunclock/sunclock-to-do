@@ -2,10 +2,12 @@
   "name": "sunclock-to-do",
   "packageManager": "yarn@3.2.3",
   "dependencies": {
+    "@headlessui/react": "^1.7.0",
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
