@@ -4644,6 +4644,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hamt_plus@npm:1.0.2":
+  version: 1.0.2
+  resolution: "hamt_plus@npm:1.0.2"
+  checksum: af26ea32db03009019cc83dfa9411521a2fa16079443de1a502c9be46d8b3c975acda8ed93fc5750ef08d3186d35901e2d8cfe717dd54bea67b358601fa74e4c
+  languageName: node
+  linkType: hard
+
 "handle-thing@npm:^2.0.0":
   version: 2.0.1
   resolution: "handle-thing@npm:2.0.1"
@@ -7038,6 +7045,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"recoil@npm:^0.7.5":
+  version: 0.7.5
+  resolution: "recoil@npm:0.7.5"
+  dependencies:
+    hamt_plus: 1.0.2
+  peerDependencies:
+    react: ">=16.13.1"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 19b410cca6839c8b886b91378112e12de3e0393b547211dafcf7a272c1aa2d7af6c09a9ed39fb3e1997abe5f3d6583e3774dc9f9cdda8c36e4cb0be64a1b17ce
+  languageName: node
+  linkType: hard
+
 "regenerate-unicode-properties@npm:^10.0.1":
   version: 10.0.1
   resolution: "regenerate-unicode-properties@npm:10.0.1"
@@ -7764,6 +7787,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: 6
+    recoil: ^0.7.5
     style-loader: ^3.3.1
     tailwindcss: ^3.1.8
     ts-loader: ^9.3.1
